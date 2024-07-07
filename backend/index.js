@@ -19,7 +19,7 @@ app.use(express.json())
 // }))
 
 app.use(cors({
-    origin: '*',
+    origin: 'https://ecommerce-mern-stack-application-9srb.vercel.app/',
     methods: ['GET', 'POST'], // Adjust as needed
     credentials: true, // Allow cookies and authorization headers with credentials
   }));
