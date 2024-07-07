@@ -19,12 +19,12 @@ app.use(express.json())
 // }))
 
 const corsOptions = {
-    origin: 'https://ecommerce-mern-stack-application-9srb-5pifuu87w.vercel.app',
+    origin: '*',
     methods: ['GET', 'POST'], // Adjust as needed
     credentials: true, // Allow cookies and authorization headers with credentials
   };
   
-  app.use(cors());
+ 
 app.use("/api",router)
 
 const PORT = 4000 || process.env.PORT
