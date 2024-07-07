@@ -18,11 +18,11 @@ app.use(express.json())
 //     credentials : true
 // }))
 
-const corsOptions = {
+app.use(cors({
     origin: '*',
     methods: ['GET', 'POST'], // Adjust as needed
     credentials: true, // Allow cookies and authorization headers with credentials
-  };
+  }));
   
  
 app.use("/api",router)
