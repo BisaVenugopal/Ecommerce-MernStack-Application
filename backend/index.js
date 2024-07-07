@@ -10,13 +10,21 @@ const router = require('./routes/index')
 const app = express()
 app.use(bodyParser.json({ limit: '50mb' })); // Adjust limit as needed
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
-app.use(cors({
-    origin : process.env.FRONTEND_URL,
-    methods : ["POST","GET"],
-    credentials : true
-}))
-app.use(express.json())
 app.use(cookieParser())
+app.use(express.json())
+// app.use(cors({
+//     origin : process.env.FRONTEND_URL,
+//     methods : ["POST","GET"],
+//     credentials : true
+// }))
+
+const corsOptions = {
+    origin: process.env.FRONTEND_URL, // Set to your frontend URL
+    methods: ['GET', 'POST'], // Adjust as needed
+    credentials: true, // Allow cookies and authorization headers with credentials
+  };
+  
+  app.use(cors(corsOptions));
 app.use("/api",router)
 
 const PORT = 4000 || process.env.PORT
