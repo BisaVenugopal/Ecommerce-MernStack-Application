@@ -1,4 +1,4 @@
-const backendDomain = process.env.REACT_APP_BACKEND_URL
+const backendDomain = 'https://ecommerce-mern-stack-application-52a7j8rza.vercel.app/'
 
 const SummaryApi = {
     signUP : {
