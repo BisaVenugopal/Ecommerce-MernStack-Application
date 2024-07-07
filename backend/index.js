@@ -19,7 +19,7 @@ app.use(express.json())
 // }))
 
 const corsOptions = {
-    origin: process.env.FRONTEND_URL, // Set to your frontend URL
+    origin: 'https://ecommerce-mern-stack-application-9srb-5pifuu87w.vercel.app',
     methods: ['GET', 'POST'], // Adjust as needed
     credentials: true, // Allow cookies and authorization headers with credentials
   };
