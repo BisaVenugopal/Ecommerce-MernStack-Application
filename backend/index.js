@@ -24,7 +24,7 @@ const corsOptions = {
     credentials: true, // Allow cookies and authorization headers with credentials
   };
   
-  app.use(cors(corsOptions));
+  app.use(cors());
 app.use("/api",router)
 
 const PORT = 4000 || process.env.PORT
